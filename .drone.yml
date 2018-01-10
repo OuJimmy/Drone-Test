@@ -15,8 +15,8 @@ pipeline:
       {{else}}
         Build {{build.number}} failed. Fix me please.
       {{/success}}
-      *Author* {{build.author}}
-      *Branch* {{build.branch}}
       *Repo* {{repo.owner}}/{{repo.name}}
+      *Branch* {{build.branch}}
+      *Author* {{commit.author}}
       *Message* {{commit.message}}
       *Link* {{build.link}}
