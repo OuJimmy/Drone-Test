@@ -1,0 +1,9 @@
+build:
+  image: gcc:7.2
+  commands:
+    - make
+
+publish:
+  coverage:
+    when:
+      branch: master
