@@ -17,6 +17,4 @@ pipeline:
       {{/success}}
       *Repo* {{repo.owner}}/{{repo.name}}
       *Branch* {{build.branch}}
-      *Author* {{commit.author}}
-      *Message* {{commit.message}}
       *Link* {{build.link}}
