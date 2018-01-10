@@ -8,8 +8,9 @@ pipeline:
     webhook: https://hooks.slack.com/services/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
     channel: devops
     template: >
-     {{#success build.status}}
-       build {{build.number}} succeeded. Good job.
-     {{else}}
-       build {{build.number}} failed. Fix me please.
-     {{/success}}
+      {{#success build.status}}
+        Build {{build.number}} succeeded. Good job.
+      {{else}}
+        Build {{build.number}} failed. Fix me please.
+      {{/success}}
+      *Author* {{build.author}} *Branch* {{build.branch}} *Repo* {{repo.owner}}/{{repo.name}}
