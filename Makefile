@@ -1,4 +1,4 @@
-CC=gcc
+CC=arm-linux-gnueabihf-gcc
 CCFLAGS=-Wall
 LDFLAGS=
 SOURCES=$(wildcard src/*.c)
