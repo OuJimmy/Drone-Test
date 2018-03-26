@@ -6,6 +6,7 @@ pipeline:
 
   test:
     image: yanagiis/drone-deploy-to-device
+    pull: true
     device_type: UC8100
     device_image: FB_UC8100_V2.0_Build_17062219.img
     script: test.sh
