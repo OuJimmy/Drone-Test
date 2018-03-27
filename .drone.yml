@@ -5,24 +5,21 @@ pipeline:
     commands:
       - make
 
-  test-UC8100:
+  test:
     image: yanagiis/drone-deploy-to-device
     group: test
     pull: true
-    device_type: UC8100
-    device_image: FB_UC8100_V2.0_Build_17062219.img
+    device_type: ${DEVICE_TYPE}
+    device_image: ${DEVICE_IMAGE}
     script: test.sh
     source: main
 
-  test-UC8100ME:
-    image: yanagiis/drone-deploy-to-device
-    group: test
-    pull: true
-    device_type: UC8100ME
-    device_image: FWR_UC8100ME_V2.1_Build_17041918.img
-    script: test.sh
-    source: main
-
+  matrix:
+    include:
+      - DEVICE_TYPE: UC8100
+        DEVICE_IMAGE: FB_UC8100_V2.0_Build_17062219.img
+      - DEVICE_TYPE: UC8100ME
+        DEVICE_IMAGE: FWR_UC8100ME_V2.1_Build_17041918.img
 
   # slack:
   #   image: plugins/slack
