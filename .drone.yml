@@ -1,4 +1,5 @@
 pipeline:
+
   build:
     image: purplekarrot/arm-linux-gnueabihf
     commands:
