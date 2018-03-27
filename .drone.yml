@@ -7,19 +7,18 @@ pipeline:
 
   test:
     image: yanagiis/drone-deploy-to-device
-    group: test
     pull: true
     device_type: ${DEVICE_TYPE}
     device_image: ${DEVICE_IMAGE}
     script: test.sh
     source: main
 
-  matrix:
-    include:
-      - DEVICE_TYPE: UC8100
-        DEVICE_IMAGE: FB_UC8100_V2.0_Build_17062219.img
-      - DEVICE_TYPE: UC8100ME
-        DEVICE_IMAGE: FWR_UC8100ME_V2.1_Build_17041918.img
+matrix:
+  include:
+    - DEVICE_TYPE: UC8100
+      DEVICE_IMAGE: FB_UC8100_V2.0_Build_17062219.img
+    - DEVICE_TYPE: UC8100ME
+      DEVICE_IMAGE: FWR_UC8100ME_V2.1_Build_17041918.img
 
   # slack:
   #   image: plugins/slack
