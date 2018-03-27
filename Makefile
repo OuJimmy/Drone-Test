@@ -18,3 +18,4 @@ $(TARGET): $(OBJECTS)
 
 clean:
 		rm -f src/*.o $(TARGET)
+
