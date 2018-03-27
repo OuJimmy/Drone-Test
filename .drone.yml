@@ -4,11 +4,19 @@ pipeline:
     commands:
       - make
 
-  test:
+  test-UC8100:
     image: yanagiis/drone-deploy-to-device
     pull: true
     device_type: UC8100
     device_image: FB_UC8100_V2.0_Build_17062219.img
+    script: test.sh
+    source: main
+
+  test-UC8100ME:
+    image: yanagiis/drone-deploy-to-device
+    pull: true
+    device_type: UC8100ME
+    device_image: FWR_UC8100ME_V2.1_Build_17041918.img
     script: test.sh
     source: main
 
