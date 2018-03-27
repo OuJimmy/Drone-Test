@@ -17,4 +17,4 @@ $(TARGET): $(OBJECTS)
 		$(CC) $(CCFLAGS) -c $< -o $@
 
 clean:
-		rm -f *.o $(TARGET)
+		rm -f src/*.o $(TARGET)
