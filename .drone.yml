@@ -11,7 +11,7 @@ pipeline:
     device_type: ${DEVICE_TYPE}
     device_image: ${DEVICE_IMAGE}
     script: test.sh
-    source: main
+    copy_files: [ main, LICENSE ]
 
 matrix:
   include:
