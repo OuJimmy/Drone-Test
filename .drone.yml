@@ -10,6 +10,8 @@ pipeline:
     pull: true
     device_type: ${DEVICE_TYPE}
     device_image: ${DEVICE_IMAGE}
+    device_group: CI
+    thingspro_version: 2.3
     script: test.sh
     copy_files: [ main, LICENSE ]
 
